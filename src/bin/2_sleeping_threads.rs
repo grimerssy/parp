@@ -23,7 +23,7 @@ fn parallel() {
         .map(|number| {
             move || {
                 println!("Thread {number} started");
-                std::thread::sleep(std::time::Duration::from_secs(1));
+                std::thread::sleep(std::time::Duration::from_millis(300));
                 println!("Thread {number} finished");
             }
         })
